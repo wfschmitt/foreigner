@@ -1,5 +1,7 @@
 require 'active_support/all'
 require 'active_record'
+require 'active_record/connection_adapters/oracle_enhanced_adapter'
+require 'ruby-plsql'
 
 module Foreigner
   extend ActiveSupport::Autoload
@@ -24,6 +26,7 @@ module Foreigner
   end
 end
 
+Foreigner::Adapter.register 'oracle_enhanced', 'foreigner/connection_adapters/oracle_oci8_adapter'
 Foreigner::Adapter.register 'mysql', 'foreigner/connection_adapters/mysql_adapter'
 Foreigner::Adapter.register 'mysql2', 'foreigner/connection_adapters/mysql2_adapter'
 Foreigner::Adapter.register 'jdbcmysql', 'foreigner/connection_adapters/mysql2_adapter'
