@@ -7,9 +7,9 @@ require 'active_support/test_case'
 require 'minitest/autorun'
 require 'mocha/setup'
 
-# Foreigner::Adapter.registered.values.each do |file_name|
-#   require file_name
-# end
+Foreigner::Adapter.registered.values.each do |file_name|
+   require file_name
+end
 
 module TestAdapterMethods
   def execute(sql, name = nil)

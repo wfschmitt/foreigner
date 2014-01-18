@@ -3,7 +3,7 @@ require 'helper'
 class Foreigner::OracleTest < Foreigner::UnitTest
   class TestAdapter
     include TestAdapterMethods
-    include Foreigner::ConnectionAdapters::Sql2003
+    include Foreigner::ConnectionAdapters::OracleEnhancedAdapter
   end
 
   setup do
