@@ -1,7 +1,7 @@
 require 'active_support/all'
 require 'active_record'
-require 'active_record/connection_adapters/oracle_enhanced_adapter'
-require 'ruby-plsql'
+#require 'active_record/connection_adapters/oracle_enhanced_adapter'
+#require 'ruby-plsql'
 
 module Foreigner
   extend ActiveSupport::Autoload

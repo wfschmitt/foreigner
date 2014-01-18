@@ -1,6 +1,6 @@
 module Foreigner
    module ConnectionAdapters
-      module OracleOCI8Adapter
+      module OracleEnhancedAdapter
          include Foreigner::ConnectionAdapters::Sql2003
 
          def foreign_keys_notused(table_name)
@@ -34,5 +34,5 @@ module Foreigner
    end
 end
 
-Foreigner::Adapter.safe_include :OracleOCI8Adapter, Foreigner::ConnectionAdapters::OracleOCI8Adapter
-Foreigner::Adapter.safe_include :orcale_enhanced, Foreigner::ConnectionAdapters::OracleOCI8Adapter
+Foreigner::Adapter.safe_include :OracleEnhancedAdapter, Foreigner::ConnectionAdapters::OracleEnhancedAdapter
+Foreigner::Adapter.safe_include :oracle_enhanced, Foreigner::ConnectionAdapters::OracleEnhancedAdapter
